@@ -4,7 +4,7 @@ use App\Http\Controllers\Controller;
 class IndexController extends Controller
 {
     public function index(){
-        echo 111;
+        return view('Index/index');
     }
 }
 

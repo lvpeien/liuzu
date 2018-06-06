@@ -11,4 +11,11 @@
 |
 */
 
-Route::get('/index/index', ['as' => 'index/index', 'uses' => 'Home\IndexController\index']); 
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::prefix('admin')->group(function () {
+    Route::any('Login/login','LoginController@login');
+    Route::any('Index/index','IndexController@index');
+});
+
